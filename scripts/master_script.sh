@@ -16,5 +16,11 @@ python3 cpgislands_bed_format.py
 echo 'Finding the hotspots and flanking regions...'
 python3 find_hotspots.py
 
-# Finds the hotspots and flanking regions from the raw data
-sh ./bedtools.sh
+# Subtract the positions of genes and cpg islands from the hotspots and flanking regions
+sh ./bedtools_subtract.sh
+
+# Combines the hotspots with their corresponding left and right flanks
+python3 combine_script.py
+
+# Downloads the sequences data corresponding to the hotspots and their flanking regions from the 1000 Genomes Project Repository
+sh ./download_sequences.sh

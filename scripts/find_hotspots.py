@@ -133,12 +133,9 @@ for ctr in range(1, 23):
 					# Store regions
 					save_hotspots_flanks(region_start, region_end, region_type)
 						
-for i in range(0, len(hotspot)):
-	print (left_flank[i] + " (" + str(int(left_flank_length[i]/1000)) + " kb)\t" + hotspot[i] + " (" + str(int(hotspot_length[i]/1000)) + " kb)\t" + right_flank[i] + " (" + str(int(right_flank_length[i]/1000)) + " kb)")					
-
-print (str(len(hotspot)) + " hotspots")
-print (str(total_flanking) + " bp of flanking regions")
-print (str(total_hotspot) + " bp of hotspot regions")
+print ("...found: " + str(len(hotspot)) + " hotspots")
+print ("...found: " + str(total_flanking) + " bp of flanking regions")
+print ("...found: " + str(total_hotspot) + " bp of hotspot regions")
 
 # Writing to files
 flanks1 = open(dir_out + "flanks1.txt", "w")
