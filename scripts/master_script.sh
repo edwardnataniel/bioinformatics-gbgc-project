@@ -16,7 +16,7 @@ python3 cpgislands_bed_format.py
 echo 'Finding the hotspots and flanking regions...'
 python3 find_hotspots.py
 
-# Subtract the positions of genes and cpg islands from the hotspots and flanking regions
+# Subtracts the positions of genes and cpg islands from the hotspots and flanking regions
 sh ./bedtools_subtract.sh
 
 # Combines the hotspots with their corresponding left and right flanks
